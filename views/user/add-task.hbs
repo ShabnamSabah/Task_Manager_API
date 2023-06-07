@@ -1,0 +1,92 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card ">
+            <div class="card-header card-header-rose card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">assignment</i>
+              </div>
+              <h4 class="card-title">Add New Task</h4>
+            </div>
+
+            <div class="card-body">
+              {{>message}}
+            </div>
+            <div class="card-body ">
+              <form class="form" method="POST" action="/api/user/add-task">
+
+
+                <div class="row">
+                  <label class="col-md-3 col-form-label">Title</label>
+                  <div class="col-md-9">
+                    <div class="form-group has-default">
+                      <input type="text" class="form-control" name="title" value="{{title}}">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label class="col-md-3 col-form-label">Description</label>
+                  <div class="col-md-9">
+                    <div class="form-group">
+                      <textarea class="form-control" name="description" maxlength="number">{{description}}</textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="col-md-3 col-form-label">Due Date</label>
+                  <div class="col-md-9">
+                    <div class="form-group">
+                      <input type="text" class="form-control datepicker" name="due_date" value="{{due_date}}">
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="row">
+                  <label class="col-md-3 col-form-label"> Assigned To</label>
+                  <div class="col-md-9">
+
+
+                    <select class="selectpicker" name="assignedTo" data-style="select-with-transition" multiple
+                      title="Choose Users">
+                      <option disabled>Multiple Options</option>
+                      {{#each users_list}}
+                      {{#dataValues}}
+
+                      <option name="{{assignedTo}}" value="{{id}}">{{email}}</option>
+
+                      {{/dataValues}}
+                      {{/each}}
+                    </select>
+
+                  </div>
+                </div>
+
+                <div class="card-footer justify-content-center">
+                  <div class="row">
+
+                    <div class="col-md-9">
+                      <button type="submit" class="btn btn-fill btn-rose">Lets
+                        Go</button>
+                    </div>
+
+
+                  </div>
+                </div>
+
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>

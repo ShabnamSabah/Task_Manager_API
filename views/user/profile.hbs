@@ -1,0 +1,54 @@
+  <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-header card-header-icon card-header-rose">
+                  <div class="card-icon">
+                    <i class="material-icons">perm_identity</i>
+                  </div>
+                  <h4 class="card-title">Edit Profile -
+                    <small class="category">Complete your profile</small>
+                  </h4>
+                </div>
+                <div class="card-body">
+                  <form action="/api/user/edit-profile/{{user.id}}" method="post">
+                    <div class="row">
+                    
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Username</label>
+                          <input type="text"  name="name" class="form-control" value="{{user.name}}">
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Email address</label>
+                          <input type="email" nama="email" class="form-control" value="{{user.email}}" disabled>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <button type="submit" class="btn btn-rose pull-right">Update Profile</button>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card card-profile">
+                <div class="card-avatar">
+                  <a href="#pablo">
+                    <img class="img" src="/assets2/img/default-avatar.png" />
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h6 class="card-category text-gray">{{user.role}}</h6>
+                  <h4 class="card-title">{{user.name}}</h4>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
