@@ -1,5 +1,15 @@
 # Task_Manager_API
+## Technology Used
+1. Node.JS
+2. MySQL (Sequelize)
 
+    ##### 
+    Sequelize is a Node. js-based Object Relational Mapper  that makes it easy to work with MySQL, MariaDB, SQLite, PostgreSQL databases, and more. An Object Relational Mapper performs functions like handling database records by representing the data as objects. The benefit of using Sequelize is we can easily avoid writing raw SQL queries.
+
+
+3. Javascript
+4. Express.JS
+5. Handlebars for Client Side User-Interface
 ## Documentation
 
 1. Initialize the project by running the following command in Visual Studio Code.
